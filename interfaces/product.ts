@@ -9,10 +9,6 @@ export default interface IProduct extends Document {
     status: string;
     price: string;
     discount: string;
-    category_id:string;
-    productDescription_id:string;
-    product_image_ids: string;
-    generalInfo_id : string; 
     created_On : Date ;
     created_Id : string; 
     modified_On  : Date;

@@ -42,15 +42,15 @@ const ProductSchema: Schema = new Schema(
 
     productDescription_id:
     {
-      type: Schema.Types.ObjectId,
+      type:  Schema.Types.ObjectId ,
       ref: 'ProductDescription'
     },
 
     product_image_ids:
-    {
+    [{
       type: Schema.Types.ObjectId,
       ref: 'ProductImage'
-    },
+    }],
 
     generalInfo_id:
     {
