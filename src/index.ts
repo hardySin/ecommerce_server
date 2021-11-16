@@ -1,8 +1,7 @@
 import express, { Application ,Request, Response , NextFunction} from "express" ;
 import path from "path";
 const app:Application = express();
-const port:number = 8080; // default port to listen
-
+ 
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
