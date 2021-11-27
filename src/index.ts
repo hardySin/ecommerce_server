@@ -24,7 +24,7 @@ mongoose
         console.log("connected to DB")
         // start the Express server
         app.listen( config.server.port, () =>      
-         {console.log( `server started at http://localhost:${ config.server.port}` )});
+         {console.log( `server started at ${config.server.hostname}:${ config.server.port}` )});
      })
     .catch((error:any) => {
         console.log("some error occuring" , error)
