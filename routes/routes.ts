@@ -2,7 +2,7 @@ import express, { Router } from "express";
 import upload from "../middleware/multer";
 const router: Router = express.Router();
 const { createProduct, getAllProducts, getProduct, updateProduct } = require('../controllers/product');
-const { createCategory, getAllCategory } = require('../controllers/Category');
+const { createCategory, getAllCategory } = require('../controllers/category');
 const { createUser, findAllUsers } = require('../controllers/user');
 const { getDescription, updateProductDescription } = require('../controllers/productDescription');
 const { getGeneralInfo, updateGeneralInfo ,createGeneralInfo} = require('../controllers/generalInfo');
