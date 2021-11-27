@@ -17,7 +17,6 @@ app.use(express.json());
 app.use(cookieParser());
 app.use('/api', router);
 app.use('/uploads', express.static('uploads'));
-
 mongoose
     .connect(config.mongo.url, config.mongo.options)
     .then((result:any) => {
