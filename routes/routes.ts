@@ -8,7 +8,7 @@ const { getDescription, updateProductDescription } = require('../controllers/pro
 const { getGeneralInfo, updateGeneralInfo ,createGeneralInfo} = require('../controllers/generalInfo');
 const { getProductImage, addProductImage } = require('../controllers/productImage');
 
-router.post('/common', ()=>{console.log("welcome to the Ecommmerce")})
+router.get('/common', ()=>{console.log("welcome to the Ecommmerce")})
 
 //product
 router.post('/addproduct', createProduct)
