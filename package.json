@@ -2,11 +2,11 @@
   "name": "ecommerce_server",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
   "main": "index.js",
   "scripts": {
     "start": "node dist/index.js",
-    "dev": "nodemon src/index.ts",
+    "dev": "nodemon src/index.ts",  
+    "postinstall": "npm run build",
     "build": "tsc -p ."
   },    
   "keywords": [],
