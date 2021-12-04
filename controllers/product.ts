@@ -96,8 +96,10 @@ const updateProduct = (req: Request, res: Response, next: NextFunction) => {
 const getAllProducts = (req: Request, res: Response, next: NextFunction) => {
 
     Product.find()
-        .populate('category_id productDescription_id')
+        .populate('category_id productDescription_id product_image_ids')
         .then(async (result1: any) => {
+            console.log("result :" ,result1)
+
             return res.json(result1);
         })
         .catch((error1: any) => {
@@ -117,8 +119,10 @@ const getProduct = (req: Request, res: Response, next: NextFunction) => {
             var query = { _id: property };
             console.log("query ", query)
             Product.find(query)
+                .populate('category_id productDescription_id product_image_ids')
                 .then(async (result1: any) => {
-                    return res.json(result1);
+                    console.log("result :" ,result1)
+                    return res.json({result1});
                 })
                 .catch((error1: any) => {
                     console.log("error1", error1)
