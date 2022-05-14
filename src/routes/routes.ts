@@ -5,10 +5,12 @@ const { createProduct, getAllProducts, getProduct, updateProduct } = require('..
 const { createCategory, getAllCategory } = require('../controllers/category');
 const { createUser, findAllUsers } = require('../controllers/user');
 const { getDescription, updateProductDescription } = require('../controllers/productDescription');
-const { getGeneralInfo, updateGeneralInfo ,createGeneralInfo} = require('../controllers/generalInfo');
+const { getGeneralInfo, updateGeneralInfo, createGeneralInfo } = require('../controllers/generalInfo');
 const { getProductImage, addProductImage } = require('../controllers/productImage');
+import { getAllSpecificationGroup, AddSpecificationGroup } from '../controllers/specification_group';
+import { addSpecification, getAllSpecification, deleteSpecification } from "../controllers/specification";
 
-router.get('/common', ()=>{console.log("welcome to the Ecommmerce")})
+router.get('/common', () => { console.log("welcome to the commerce") })
 
 //product
 router.post('/addproduct', createProduct)
@@ -17,7 +19,16 @@ router.get('/getAllProducts', getAllProducts)
 //GerenalInfo
 router.post('/createGeneralInfo', createGeneralInfo)
 
- 
+//getAllSpecificationGroup
+router.get('/getAllSpecificationGroup', getAllSpecificationGroup)
+router.post('/addSpecificationGroup', AddSpecificationGroup)
+
+//getAllSpecification
+router.get('/getAllSpecification', getAllSpecification)
+router.post('/addSpecification', addSpecification)
+router.post('/deleteSpecification', deleteSpecification)
+
+
 //view 
 router.post('/getProduct', getProduct)
 router.post('/getDescription', getDescription)
